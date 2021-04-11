@@ -8,3 +8,130 @@
 body {
     font-family: sans-serif;
 }
+
+a {
+    color: #8c8e8f;
+    transition: color .3s ease-in-out;
+}
+
+/* UTILITIES */
+.df {
+    display: flex;
+}
+
+#btn {
+    margin: 8px 15px;
+    padding: 12px 24px;
+    font-weight: bold;
+    border-radius: 0.75rem;
+}
+
+li a:not(#btn):hover {
+    color: #000;
+}
+
+.app-header .action-list li:nth-child(5):hover a#btn {
+    background: rgba(230, 230, 230, 0.9);
+}
+
+.app-header .action-list li:nth-child(6):hover a#btn{
+    background: #333;
+}
+
+/* HEADER */
+.app-header {
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: rgb(25 28 31 / 4%) 0px 8px 16px, rgb(25 28 31 / 4%) 0px -1px 0px;
+}
+
+.app-header ul li {
+    list-style: none;
+}
+
+.app-header ul li a {
+    padding: 20px 15px;
+    display: inline-block;
+    text-decoration: none;
+}
+
+/* STATIC LIST */
+.app-header .static-list li:first-child {
+    margin-right: 2rem;
+}
+
+.app-header .static-list li:nth-child(2) a {
+    font-weight: bold;
+    color: #000;
+}
+
+/* ACTIOM LIST */
+.app-header .action-list li:nth-child(5) a#btn {
+    color: #000;
+    background: rgba(230, 230, 230, 0.6);
+    transition: background .3s ease-in-out;
+}
+
+.app-header .action-list li:nth-child(6) a#btn {
+    color: #fff;
+    background: #000;
+    transition: background .3s ease-in-out;
+}
+
+/* DROPDOWN MENU */
+.action-list li.whith-dropdown,
+.action-list .box-lg .coming-soon a {
+    position: relative;
+}
+
+.action-list .dropdown-menu {
+    display: none; /*jQuery*/
+    position: absolute;
+    padding: 20px 15px 0;
+    text-align: left;
+    background: #fff;
+    border-radius: 4px;
+    filter: drop-shadow(0 0 5px rgba(0,0,0, .2));
+}
+
+.action-list .box-lg {
+    right: 1%;
+}
+
+.dropdown-menu .box .box-content:not(:last-child) {
+    margin-right: 1.5rem;
+}
+
+.dropdown-menu .box .box-content div svg{
+    width: 2rem;
+    padding: 8px;
+    margin-right: 5px;
+    vertical-align: middle;
+    color: #8c8e8f;
+    background: rgba(230, 230, 230, 0.6);
+    border-radius: 50%;
+}
+
+.dropdown-menu .box .box-content div {
+    min-width: 150px;
+    font-size: 12px;
+    color: #8c8e8f;
+}
+
+.app-header .dropdown-menu li a {
+    padding-left: 0;
+    padding-right: 0;
+}
+
+/* COMING SOON */
+.action-list .box-lg .coming-soon a span:first-child {
+    position: absolute;
+    top: 10%;
+    right: -30%;
+    font-size: 0.5rem;
+    color: dodgerblue;
+}
+
+.action-list .box-lg .coming-soon a span:nth-child(2) {
+    color: #C9CACB;
+}
